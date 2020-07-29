@@ -13,6 +13,9 @@
         <link rel="icon" href="assets/img/favico.png" type="image/png" />
     </head>
     <body>
+      <!--===== SCROLL BAR =====-->
+      <div id="progress"></div>
+      <div id="scroll"></div>
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
@@ -22,12 +25,12 @@
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                        <li class="nav__item"><a href="assets/img/RamBarath_B_resume.pdf" class="nav__link" download="RamBarath-Resume">Resume</a></li>
+                        <li class="nav__item"><a href="#home" class="nav__link active"><i class="fas fa-home" style="padding-right:10px;" ></i>Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link"><i class="far fa-address-card" style="padding-right:10px;" ></i>About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link"><i class="fas fa-laptop-code" style="padding-right:10px;" ></i>Skills</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link"><i class="fas fa-code" style="padding-right:10px;" ></i>Work</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link"><i class="fas fa-address-book" style="padding-right:10px;" ></i>Contact</a></li>
+                        <li class="nav__item"><a href="assets/img/RamBarath_B_resume.pdf" class="nav__link" download="RamBarath-Resume"><i class="fas fa-download" style="padding-right:10px;" ></i>Resume</a></li>
                     </ul>
                 </div>
 
@@ -41,15 +44,15 @@
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">RamBarath</span><br> Web Designer</h1>
+                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">RamBarath</span><br> Web Developer</h1>
 
                     <a href="#" class="button">Contact</a>
                 </div>
 
                 <div class="home__social">
-                    <a href="https://www.linkedin.com/in/rambarath-b-6a3863192/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://www.instagram.com/_rambarath_/" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
-                    <a href="https://github.com/Ram-Barath" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                    <a href="https://www.linkedin.com/in/rambarath-b-6a3863192/" target="_blank" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.instagram.com/_rambarath_/" target="_blank"  class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://github.com/Ram-Barath" target="_blank"  class="home__social-icon"><i class='bx bxl-github' ></i></a>
                 </div>
 
                 <div class="home__img">    
@@ -223,13 +226,25 @@
         <footer class="footer">
             <p class="footer__title">RamBarath</p>
             <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="https://www.instagram.com/_rambarath_/" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="https://twitter.com/Rambarath_" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://wa.me/917010384345" target="_blank" class="footer__icon"><i class='bx bxl-whatsapp' ></i></a>
+                <a href="https://www.instagram.com/_rambarath_/" target="_blank"  class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://twitter.com/Rambarath_" target="_blank"  class="footer__icon"><i class='bx bxl-twitter' ></i></a>
             </div>
             <p>&#169; 2020 copyright all right reserved</p>
         </footer>
 
+
+        <!--===== SCROLL BAR =====-->
+        <script type="text/javascript">
+            let progress = document.getElementById('progress');
+            let totalheight = document.body.scrollHeight - window.innerHeight;
+            window.onscroll = function()
+            {
+                let progressHeight = (window.pageYOffset / totalheight) * 100;
+                progress.style.height = progressHeight+ "%";
+            }
+
+        </script>
 
         <!--===== SCROLL REVEAL =====-->
         <script src="https://unpkg.com/scrollreveal"></script>
