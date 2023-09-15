@@ -15,13 +15,13 @@
 /*===== Fuente y tipografia =====*/
 :root{
   --body-font: 'Poppins', sans-serif;
-  --big-font-size: 2rem;
+  --big-font-size: 1rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: 0.938rem;
 }
 @media screen and (min-width: 768px){
   :root{
-    --big-font-size: 3.5rem;
+    --big-font-size: 2.5rem;
     --h2-font-size: 2rem;
     --normal-font-size: 1rem;
   }
@@ -66,7 +66,6 @@ h1,h2,p{
 ul{
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 a{
   text-decoration: none;
@@ -261,25 +260,18 @@ img{
 .skills__text{
   margin-bottom: var(--mb-4);
 }
-.skills__data{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  font-weight: var(--font-semi);
-  padding: .5rem 1rem;
-  margin-bottom: var(--mb-4);
-  border-radius: .5rem;
-  box-shadow: 0 4px 25px rgba(14,36,49,.15);
-}
 .skills__icon{
   font-size: 2rem;
   margin-right: var(--mb-2);
   color: var(--first-color);
 }
 .skills__names{
-  display: flex;
+  display:grid;
   align-items: center;
+  font-weight: var(--font-semi);
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  box-shadow: 0 4px 25px rgba(14,36,49,.15);
 }
 .skills__bar{
   position: absolute;
@@ -333,6 +325,22 @@ img{
 }
 .work__img img:hover{
   transform: scale(1.1);
+}
+
+/* ===== certificate =====*/
+.certificate__container{
+  row-gap: 2rem;
+  text-align: center;
+}
+.certificate__subtitle{
+  margin-bottom: var(--mb-2);
+}
+.certificate__img{
+  justify-self: center;
+}
+.certificate__img img{
+  width: 200px;
+  border-radius: .5rem;
 }
 
 /* ===== CONTACT =====*/
@@ -399,6 +407,7 @@ img{
   .nav__list{
     display: flex;
     padding-top: 0;
+    list-style: none;
   }
   .nav__item{
     margin-left: var(--mb-6);
@@ -441,8 +450,8 @@ img{
     width: 300px;
   }
   .work__container{
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1,1fr);
     column-gap: 2rem;
   }
   .contact__form{
@@ -522,4 +531,97 @@ img{
     border-radius: 10px;
     background: linear-gradient(to top,#008aff,#00ffe7);
     filter: blur(30px);
+  }
+
+  .experience {
+    position: relative;
+    box-align: center;
+    text-align: center;
+    margin-bottom: var(--mb-2);
+  }
+  .job-title {
+    font-weight: bold;
+    text-align: center;
+    box-align: center;
+    margin-bottom: var(--mb-2);
+  }
+  .date {
+    color: rgb(255, 247, 0);
+    margin-bottom: var(--mb-2);
+    font-weight: bold;
+  }
+  .we-text {
+    padding-left: 20px;
+    box-align: center;
+    list-style: none;
+    display:grid;
+    flex-direction: column;
+    align-items: center; /* Center-align horizontally */
+    justify-content: center; /* Center-align vertically */
+    text-align: justify; /* Justify the text */
+    margin-bottom: var(--mb-2)
+  }
+
+  .we-margin{
+    margin-bottom: var(--mb-2);
+    margin-bottom: var(--mb-4);
+  }
+
+  .contact {
+    margin:0;
+  }
+  .contact h2 {
+    margin-top: 0;
+  }
+  .contact-field {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .contact-label {
+    font-weight: bold;
+  }
+  .contact-social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    align-items: left;
+  }
+
+  b {
+    color: #fff;
+    text-align: center;
+    -webkit-animation: b 1s ease-in-out infinite alternate;
+    -moz-animation: b 1s ease-in-out infinite alternate;
+    animation: b 1s ease-in-out infinite alternate;
+  
+  }
+  
+  @-webkit-keyframes b {
+    from {
+      text-shadow: 0 0 1px #ff7a00, 0 0 1px #ff7a00, 0 0 2px #ff7a00, 0 0 2px #ff7a00;
+    }
+    
+    to {
+      text-shadow: 0 0 2px #ff9e30, 0 0 2px #ff9e30, 0 0 3px #ff961e, 0 0 4px #ff8c19;
+    }
+  }
+
+
+  .parent {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    font-weight: bold;
+    line-height: 100px;
+    overflow: hidden;
+  }
+  
+  .child {
+    flex: 1 0 21%; /* explanation below */
+    margin: 25px;
+    height: 100px;
+    background-color: #333333;
+    border-radius: 10px 140px 30px 140px;
   }
